@@ -1,13 +1,13 @@
 def is_anagram(str1, str2):
     lst_str1 = []
     for ch in str1:
-        lst_str1.append(ch)
+        lst_str1.append(ch.lower())
 
     lst_str2 = []
     for ch in str2:
-        lst_str2.append(ch)
+        lst_str2.append(ch.lower())
 
-    if lst_str1.sort() == lst_str2.sort():
+    if sorted(lst_str1) == sorted(lst_str2):
         output = print(f"{str1} dan {str2} adalah anagram")
     else:
         output = print(f"{str1} dan {str2} bukan anagram")
